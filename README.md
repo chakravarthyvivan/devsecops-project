@@ -1,1 +1,1 @@
-My DevSecOps Project
+DevSecOps Project
