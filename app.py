@@ -8,10 +8,4 @@ def home():
 
 @app.route("/health")
 def health():
-    return {
-        "status": "UP"
-    }
-
-if __name__ == "__main__":
-    app.run(debug=False)
-    print("CI pipeline test successful")
+    return {"status": "UP"}
