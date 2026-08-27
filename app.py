@@ -1,17 +1,6 @@
-from flask import Flask
+from flask import request
 
-app = Flask(__name__)
-
-@app.route("/")
-def home():
-    return "Hello from DevSecOps!"
-
-@app.route("/health")
-def health():
-    return {
-        "status": "UP"
-    }
-
-if __name__ == "__main__":
-    app.run(debug=False)
-    print("CI pipeline test successful")
+@app.route("/hello")
+def hello():
+    name = request.args.get("name")
+    return "Hello " + name
