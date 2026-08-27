@@ -1,6 +1,11 @@
-from flask import request
+from flask import Flask
 
-@app.route("/hello")
-def hello():
-    name = request.args.get("name")
-    return "Hello " + name
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Hello from DevSecOps!"
+
+@app.route("/health")
+def health():
+    return {"status": "UP"}
